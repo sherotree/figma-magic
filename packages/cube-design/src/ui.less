@@ -1,0 +1,49 @@
+html,
+body,
+main {
+  height: 100%;
+  font-size: 16px;
+}
+
+#cube-design {
+  font-size: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.p-2 {
+  padding: 0.5rem; /* 8px */
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem; /* 12px */
+}
+
+.cube-design {
+  .row-select {
+    &:hover {
+      background-color: var(--figma-color-bg-pressed);
+      color: var(--figma-color-text);
+
+      &::after {
+        display: block;
+        content: url(./assets/arrow-right.svg);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 16px;
+      }
+    }
+  }
+
+  .desc {
+    color: var(--figma-color-text-tertiary);
+  }
+}

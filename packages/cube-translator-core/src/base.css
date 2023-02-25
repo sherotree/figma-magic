@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1d77ff;
+  --color-secondary: var(--figma-color-text-secondary);
+  --color-bg: var(--figma-color-bg);
+  --color-bg-hover: var(--figma-color-bg-hover);
+  --color-bg-active: var(--figma-color-bg-pressed);
+  --color-border: var(--figma-color-border);
+  --color-border-focus: var(--figma-color-border-selected);
+  --color-icon: var(--figma-color-icon);
+  --color-text: var(--figma-color-text);
+  --color-bg-brand: var(--figma-color-bg-brand);
+  --color-bg-brand-hover: var(--figma-color-bg-brand-hover);
+  --color-bg-brand-active: var(--figma-color-bg-brand-pressed);
+  --color-border-brand: var(--figma-color-border-brand);
+  --color-border-brand-focus: var(--figma-color-border-selected-strong);
+  --color-text-brand: var(--figma-color-text-onbrand);
+  --color-bg-secondary: rgba(29, 119, 255, 0.06);
+}
+
+html,
+body,
+main {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-x: hidden;
+  padding: 16px;
+}
+
+/* ::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+} */
+
+.ant-btn {
+  box-shadow: unset !important;
+}
+
+.ant-select-selector {
+  box-shadow: unset !important;
+}
+
+.ant-select-selection-item-remove {
+  display: inline-flex !important;
+}

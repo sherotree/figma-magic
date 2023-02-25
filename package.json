@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "ls": "lerna ls",
+    "changed": "lerna changed",
+    "build": "lerna run build",
+    "clean": "lerna clean --yes",
+    "info": "lerna info"
+  },
+  "devDependencies": {
+    "lerna": "6.5.0"
+  }
+}

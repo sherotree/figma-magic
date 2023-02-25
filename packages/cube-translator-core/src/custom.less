@@ -1,0 +1,149 @@
+.cube-translator {
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 2%;
+    grid-row-gap: 8px;
+  }
+
+  .show-in-cell {
+    width: 104px;
+    flex-grow: 1;
+    height: 72px;
+    border: 1px solid var(--figma-color-border-disabled);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .position-wrapper {
+    background-color: var(--color-bg-secondary);
+    border-radius: 8px;
+
+    .position-cell {
+      width: 102px;
+      flex-grow: 1;
+      height: 56px;
+      border: 1px solid var(--figma-color-border-brand);
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .position-cell-active {
+      background: rgba(29, 119, 255, 0.08);
+      border: 1px solid var(--figma-color-border-selected);
+      color: var(--figma-color-text-selected);
+    }
+  }
+
+  .arrow-left-icon {
+    padding: 4px;
+    cursor: pointer;
+    margin-right: 12px;
+    border-radius: 6px;
+    &:hover {
+      background-color: var(--figma-color-bg-hover);
+    }
+  }
+
+  .show-in-cell-inactive:hover {
+    border: 1px solid var(--figma-color-border-selected);
+  }
+
+  .show-in-cell-active {
+    background: rgba(29, 119, 255, 0.08);
+    border: 1px solid var(--figma-color-border-selected);
+    color: var(--figma-color-text-selected);
+  }
+
+  .delete-hover:hover {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+  }
+
+  .fold-hover:hover {
+    background: var(--figma-color-bg-selected);
+  }
+
+  .unfold-hover:hover {
+    background: var(--figma-color-bg-hover);
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  .rotate {
+    animation: rotation 2s infinite linear;
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-primary {
+    color: #1d77ff;
+  }
+
+  .tab-active-border {
+    color: #1d77ff;
+    border-image-source: linear-gradient(90deg, transparent 33%, #1d77ff 33%, #1d77ff 67%, var(--color-bg) 67%);
+    border-image-slice: 1;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+
+  .human-translate {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .upload {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 48px;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid var(--figma-color-border);
+    }
+  }
+
+  .box {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 160px;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--figma-color-border);
+    &:hover {
+      border: 1px solid var(--figma-color-bg-brand-hover);
+    }
+    &:active {
+      background: var(--figma-color-bg-selected);
+      border: 1px solid var(--figma-color-bg-brand-hover);
+    }
+  }
+}
